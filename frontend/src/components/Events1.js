@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import calendar_icon from './images/icons/calendar.png'
-import add_icon from './images/icons/add.png'
-import delete_icon from './images/icons/remove.png'
-import edit_icon from './images/icons/edit.png'
-import './App.css';
+import calendar_icon from '../images/icons/calendar.png'
+import add_icon from '../images/icons/add.png'
+import delete_icon from '../images/icons/remove.png'
+import edit_icon from '../images/icons/edit.png'
+import '../../src/App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
-class App extends Component {
+class Events1 extends Component {
   
   constructor(props){
     super(props)
@@ -96,4 +96,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Events1;

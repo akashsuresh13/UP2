@@ -18,13 +18,15 @@ users.post('/login',(req,res) => {
     .then(user => {
         if(user){
             console.log(user)
+            let userdatas = {
+                userID:user.dataValues.uid,
+                userFID:user.dataValues.fid
+            }
             if(req.body.upass==user.upass){
-                // let token = jwt.sign(user.dataValues,process.env.SECRET_KEY,{
-                //     expiresIn: 1440
-                // })
-                // console.log(token)
-                // res.send(token)
-                let token = user.fid
+                let token = jwt.sign(userdatas,process.env.SECRET_KEY,{
+                    expiresIn: 1440
+                })
+                console.log(token)
                 res.send(token)
             }
         }else{
