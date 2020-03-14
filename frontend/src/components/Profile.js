@@ -44,7 +44,12 @@ export default class Profile extends Component{
                     </table>
                     <li className="nav-item">
                         <Link to="/events" className="nav-link">
-                            Login
+                            Events
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link to="/subs_raise" className="nav-link">
+                            Substitute Raise
                         </Link>
                     </li>
                 </div>
