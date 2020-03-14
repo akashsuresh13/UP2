@@ -52,6 +52,11 @@ export default class Profile extends Component{
                             Substitute Raise
                         </Link>
                     </li>
+                    <li className="nav-item">
+                        <Link to="/subs_offer" className="nav-link">
+                            Substitute Offer
+                        </Link>
+                    </li>
                 </div>
             </div>
         )
