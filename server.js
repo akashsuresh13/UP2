@@ -1,14 +1,13 @@
 require('dotenv').config()
 const subs_offer=require('./src/routes/substitute_offer')
+var Users = require('./src/routes/Users')
 const express=require('express')
 const app=express()
-
 const bodyParser=require('body-parser')
+
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
-
 app.set('port',process.env.port||5000)
-
 app.use(express.json())
 
 app.use((req, res, next) => {
@@ -20,6 +19,7 @@ app.use((req, res, next) => {
 });
 
 app.use('/offer',subs_offer)
+app.use('/users',Users)
 
 app.use('/',(req,res) => {
     res.send("Hello World from node.js server")

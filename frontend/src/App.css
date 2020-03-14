@@ -29,3 +29,8 @@
 .btn-round { border-radius: 30px; }
 .bg-indigo { background: indigo; }
 .text-cyan { color: #35bdff; }
+.button-margin { margin: 0 15px}
+.anyClass {
+  height: 200px;
+  overflow-y: scroll;
+}
