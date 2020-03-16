@@ -45,7 +45,6 @@
   overflow-y: scroll;
 }
 
-
 .mytooltip .mytext {
   visibility: hidden;
   width: 250px;
@@ -91,4 +90,8 @@
   border-bottom: black 1px solid;
   padding: 5px;
   font-size: 18px;
+}
+
+.subs_top{
+  
 }
