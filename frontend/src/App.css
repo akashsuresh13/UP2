@@ -44,3 +44,50 @@
   height: 200px;
   overflow-y: scroll;
 }
+
+.mytooltip .mytext {
+  visibility: hidden;
+  width: 250px;
+  background-color: white;
+  color: #000;
+  z-index: 1;
+  top: 150%;
+  left: -90%;
+  margin-left: -90px;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+}
+.mytooltip {
+  position: relative;
+  display: inline-block;
+}
+.mytooltip .mytext:after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -10px;
+  width: 0; 
+  height: 0; 
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid white;
+}
+.mytooltip:hover .mytext {
+  visibility: visible;
+}
+
+.mytext ul{
+  list-style: none;
+  list-style-type: none;
+  width: 100%;
+  margin-left: -7.5%;
+}
+
+.mytext li{
+  border-bottom: black 1px solid;
+  padding: 5px;
+  font-size: 18px;
+}

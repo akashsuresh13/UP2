@@ -27,7 +27,6 @@ class Events1 extends Component {
 
   render() {
     return (
-      <div className="App">
         <div class="d-md-flex h-md-100 align-items-center">
           <div class="col-md-6 p-0 bg-indigo h-md-100">
               <div class="text-white d-md-flex align-items-center h-100 p-5 text-center justify-content-center">
@@ -114,7 +113,6 @@ class Events1 extends Component {
               </div>
           </div>
         </div>
-      </div>
     );
   }
 }
