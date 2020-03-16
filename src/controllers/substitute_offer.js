@@ -62,4 +62,33 @@ controllers.delete=async (req,res) => {
     res.json({success: true,deleted: del,message: "Deleted Successfully"})
 }
 
+controllers.create = async (req,res) => {
+    // data
+    const { ffid, ccid, ddate, hhrid } = req.body;
+    // create
+
+    console.log(req.body)
+    const data = await so_con.create({
+        soid: "",
+      fid: ffid,
+      cid: ccid,
+      date: ddate,
+      hrid: hhrid,
+      
+    })
+    .then(function(data){
+      return data;
+    })
+    .catch(error =>{
+      console.log("Error "+error)
+      return error;
+    })
+    // return res
+    res.status(200).json({
+      success: true,
+      message:"Saved Successfully",
+      data: data
+    });
+}
+
 module.exports=controllers

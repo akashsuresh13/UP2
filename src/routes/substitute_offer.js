@@ -11,6 +11,8 @@ router.post('/delete',so_con.delete)
 
 router.get('/tfetch/:id',so_con.tfetch)
 
+router.post('/create',so_con.create)
+
 router.get('/ofetch/:id',so_con.ofetch)
 router.get('/',(req,res) => {
     res.send("Main Page from subs offer")
