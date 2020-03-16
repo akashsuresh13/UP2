@@ -33,49 +33,71 @@ export default class Subs_Raise extends Component {
               <div class="text-white d-md-flex align-items-center h-100 p-5 text-center justify-content-center">
                 <div class="border rounded p-5">
                 
-                  <div className="form-group">
-                    <div class="form-inline">
-                      <div class="form-group">
-                        <DatePicker 
-                          placeholderText="Start Date"
-                          dateFormat="d-MM-yyyy"
-                          class="form-control"
-                          value={this.state.startDate}
-                          onChange={this.onChange}
-                        />
-                        <img src={calendar_icon} class="img-fluid" alt="Responsive image"></img>
-                      </div>
-                      <div class="form-group">
-                        <DatePicker 
-                          placeholderText="End Date"
-                          dateFormat="d-MM-yyyy"
-                          class="form-control"
-                          value={this.state.endDate}
-                          onChange={this.onChange}
-                        />
-                        <img src={calendar_icon} class="img-fluid" alt="canlendar icon"></img>
-                      </div>
-                      <div class="form-group">
-                        <select id="hr_no">
-                          <option value="default">Select Hour</option>
-                          <option value="1">L1</option>
-                          <option value="2">T3</option>
-                          <option value="3">T5</option>
-                          <option value="4">T2</option>
-                        </select> 
-                        <div class="form-group">
-                        <input type="radio" value="entire_day" id="entire_day" name="entire_day"></input>  
-                        <label for="entire_day">Entire Day</label>
-                        </div>
-                      </div>
-                      
-                    </div>
-                  </div> 
-                  <div className="form-group">
-                      <button type="button" class="button-margin btn btn-primary">Add</button>
-                      <button type="button" class="button-margin btn btn-danger">Delete</button>
+
+                <div class="form-group"><div class="input-group">
+                  <div class="input-group-prepend">
+                    <img src={calendar_icon} class="img-fluid" alt="canlendar icon"></img>
                   </div>
+                  <DatePicker 
+                    placeholderText="Start Date"
+                    dateFormat="d-MM-yyyy"
+                    value={this.state.startDate}
+                    selected={this.state.startDate}
+                    name="startDate"
+                    onChange={(date) => {this.setState({startDate:date})}}
+                  />
+                </div></div>
+
+                <div class="form-group"><div class="input-group">
+                  <div class="input-group-prepend">
+                    <img src={calendar_icon} class="img-fluid" alt="canlendar icon"></img>
+                  </div>
+                  <DatePicker 
+                    placeholderText="End Date"
+                    dateFormat="d-MM-yyyy"
+                    name="endDate"
+                    value={this.state.endDate}
+                    selected={this.state.endDate}
+                    onChange={(date) => {this.setState({endDate:date})}}
+                  />
+                </div></div>
+
+                <div class="form-group">
+                  <select id="hr_no" class="custom-select">
+                    <option value="default">Select Hour</option>
+                    <option value="1">L1</option>
+                    <option value="2">T3</option>
+                    <option value="3">T5</option>
+                    <option value="4">T2</option>
+                  </select> 
                 </div>
+
+                <div class="form-group"><div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <input type="checkbox" aria-label="Checkbox for following text input" />
+                    </div>
+                  </div>
+                  <input type="text" class="form-control" value="Entire Day" readOnly/>
+                </div></div>
+
+                  {/* <div className="form-group">
+                    <button type="button" class="btn btn-primary btn-lg btn-block">ADD</button>
+                  </div>
+
+                  <div className="form-group">
+                    <button type="button" class="btn btn-danger btn-lg btn-block">DELETE</button>
+                  </div> */}
+
+                  <div className="form-group">
+                    <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
+                      <button type="button" class="btn btn-danger">DELETE</button>
+                      <button type="button" class="btn btn-primary">ADD</button>
+                      <button type="button" class="btn btn-warning">RESET</button>
+                    </div>
+                  </div>
+
+                  </div>
               </div>
           </div>
 

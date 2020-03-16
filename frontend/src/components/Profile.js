@@ -1,54 +1,60 @@
 import React, { Component } from 'react'
 import jwt_decode from 'jwt-decode'
 import { Link,withRouter } from 'react-router-dom'
+import substitute_icon from '../images/icons/substitute.png'
+import '../App.css'
+import profile_icon from '../images/icons/profile.png'
 // import { decode } from 'punycode'
 
 export default class Profile extends Component{
 
+    constructor(){
+        super()
+        this.state = {
+            userID: '',
+            userFID: '',
+            userName: '',
+            reload: false
+        }
+    }
+
+    componentDidMount(){
+        let token = localStorage.usertoken
+        let decoded = jwt_decode(token)
+        this.setState({
+            userID: decoded.user_email_id,
+            userFID: decoded.user_FID,
+            userName: decoded.user_name
+        })
+    }
+
     render(){
 
         return(
-<<<<<<< HEAD
             <div class="d-md-flex h-md-100 align-items-center">
                 <div class="col-md-6 p-0 bg-indigo h-md-100">
-                    First Content
+                    {/* <div class = "mytooltip">
+                        <img src={profile_icon} class="img-fluid" alt="Responsive image"></img>
+                        <div class = "mytext">
+                            <ul>
+                                <li>{this.state.userName}</li>
+                                <li>{this.state.userID}</li>
+                                <li>{this.state.userFID}</li>
+                            </ul>
+                        </div>
+                    </div>                         */}
+                    <div class="text-white d-md-flex align-items-center h-100 p-5 text-center justify-content-center">
+                            <Link to="/subs_raise" className="nav-link">
+                                <div class = "mytext">R</div>
+                            </Link>
+                            <img src={substitute_icon} class="img-fluid" alt="Responsive image"></img>
+                            <Link to="/subs_offer" className="nav-link">
+                                <div class = "mytext">O</div>
+                            </Link>
+                    </div>
                 </div>
                 <div class="col-md-6 p-0 bg-white h-md-100 loginarea">
                     Second Content
-=======
-            <div className="container">
-                <div className="jumbotron mt-5">
-                    <div className="col-sm-8 mx-auto">
-                        <h1 className="text-center">PROFILE</h1>
-                    </div>
-                    <table className="table col-md-6 mx-auto">
-                        <tbody>
-                            <tr>
-                                <td>First Name</td>
-                                <td>{this.state.userID}</td>
-                            </tr>
-                            <tr>
-                                <td>Last Name</td>
-                                <td>{this.state.userFID}</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <li className="nav-item">
-                        <Link to="/events" className="nav-link">
-                            Events
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to="/subs_raise" className="nav-link">
-                            Substitute Raise
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to="/subs_offer" className="nav-link">
-                            Substitute Offer
-                        </Link>
-                    </li>
->>>>>>> e2d7e2662361cd319f1c64de3d3af31867199ba3
                 </div>
             </div>
         )
