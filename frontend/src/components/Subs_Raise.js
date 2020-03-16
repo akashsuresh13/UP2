@@ -21,6 +21,7 @@ export default class Subs_Raise extends Component {
     this.onChange = this.onChange.bind(this)
   }
 
+  
   onChange(e){
       this.setState({[e.target.name]: e.target.value})
   }
