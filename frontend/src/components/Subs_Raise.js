@@ -103,7 +103,7 @@ export default class Subs_Raise extends Component {
           </div>
 
           <div class="col-md-6 p-0 bg-white h-md-100 loginarea">
-              <div class="d-md-flex align-items-center h-md-100 p-5 justify-content-center">
+              <div class="d-md-flex align-items-center h-md-100 p-5 justify-content-center" >
               <div class="table-wrapper-scroll-y my-custom-scrollbar">
 
 <table class="table table-bordered table-striped mb-0">
