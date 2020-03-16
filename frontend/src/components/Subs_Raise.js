@@ -32,12 +32,7 @@ export default class Subs_Raise extends Component {
           <div class="col-md-6 p-0 bg-indigo h-md-100">
               <div class="text-white d-md-flex align-items-center h-100 p-5 text-center justify-content-center">
                 <div class="border rounded p-5">
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Event Name" 
-                            name="email"
-                            value={this.state.eventName}
-                            onChange={this.onChange} />
-                  </div>
+                
                   <div className="form-group">
                     <div class="form-inline">
                       <div class="form-group">
@@ -60,12 +55,25 @@ export default class Subs_Raise extends Component {
                         />
                         <img src={calendar_icon} class="img-fluid" alt="canlendar icon"></img>
                       </div>
+                      <div class="form-group">
+                        <select id="hr_no">
+                          <option value="default">Select Hour</option>
+                          <option value="1">L1</option>
+                          <option value="2">T3</option>
+                          <option value="3">T5</option>
+                          <option value="4">T2</option>
+                        </select> 
+                        <div class="form-group">
+                        <input type="radio" value="entire_day" id="entire_day" name="entire_day"></input>  
+                        <label for="entire_day">Entire Day</label>
+                        </div>
+                      </div>
+                      
                     </div>
                   </div> 
                   <div className="form-group">
-                      <button type="button" class="button-margin btn btn-success"><img src={add_icon} class="img-fluid" alt="add icon"></img></button>
-                      <button type="button" class="button-margin btn btn-primary"><img src={edit_icon} class="img-fluid" alt="add icon"></img></button>
-                      <button type="button" class="button-margin btn btn-danger"><img src={delete_icon} class="img-fluid" alt="add icon"></img></button>
+                      <button type="button" class="button-margin btn btn-primary">Add</button>
+                      <button type="button" class="button-margin btn btn-danger">Delete</button>
                   </div>
                 </div>
               </div>
