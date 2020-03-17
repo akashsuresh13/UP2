@@ -42,59 +42,60 @@ export default class Subs_Raise extends Component {
                     </select>
                   </div>
 
-                  <div style={{height:"200px",overflow:"auto"}} class="form-group">
-        
-                      <div style={{height:"50px",textAlign:"center",fontSize:"24px",backgroundColor:"white"}}>Sections</div>
+                  <div className="form-group">
+                    <div style={{textAlign:"center",padding:"5px 0px",
+                                  fontSize:"24px",backgroundColor:"white",
+                                  color:"black",verticalAlign:"center"}}>Sections</div>
 
-                      <table class="table table-fixed table-bordered table-striped mb-0" bgcolor="white">
-                  
-                        {/* <thead style={{position:"fixed"}}> 
-                          <tr>
-                            <th scope="sec">Section</th>
-                          </tr>
-                        </thead> */}
+                    <table class="table table-fixed table-bordered table-striped mb-0" bgcolor="white">
+                
+                      {/* <thead style={{position:"fixed"}}> 
+                        <tr>
+                          <th scope="sec">Section</th>
+                        </tr>
+                      </thead> */}
 
-                        <tbody>
-                          <tr>
-                            <td>5CSE1</td>
-                          </tr>
-                          <tr>
-                            <td>5CSE2</td>
-                          </tr>
-                          <tr>
-                            <td>5CSE3</td>
-                          </tr>
-                          <tr>
-                            <td>5CSE4</td>
-                          </tr>
-                          <tr>
-                            <td>5CSE5</td>
-                          </tr>
-                          <tr>
-                            <td>5CSE6</td>
-                          </tr>
-                          <tr>
-                            <td>5CSE4</td>
-                          </tr>
-                          <tr>
-                            <td>5CSE5</td>
-                          </tr>
-                          <tr>
-                            <td>5CSE6</td>
-                          </tr><tr>
-                            <td>5CSE4</td>
-                          </tr>
-                          <tr>
-                            <td>5CSE5</td>
-                          </tr>
-                          <tr>
-                            <td>5CSEM</td>
-                          </tr>
-                        </tbody>
+                      <tbody class="small-table">
+                        <tr>
+                          <td>5CSE1</td>
+                        </tr>
+                        <tr>
+                          <td>5CSE2</td>
+                        </tr>
+                        <tr>
+                          <td>5CSE3</td>
+                        </tr>
+                        <tr>
+                          <td>5CSE4</td>
+                        </tr>
+                        <tr>
+                          <td>5CSE5</td>
+                        </tr>
+                        <tr>
+                          <td>5CSE6</td>
+                        </tr>
+                        <tr>
+                          <td>5CSE4</td>
+                        </tr>
+                        <tr>
+                          <td>5CSE5</td>
+                        </tr>
+                        <tr>
+                          <td>5CSE6</td>
+                        </tr><tr>
+                          <td>5CSE4</td>
+                        </tr>
+                        <tr>
+                          <td>5CSE5</td>
+                        </tr>
+                        <tr>
+                          <td>5CSEM</td>
+                        </tr>
+                      </tbody>
 
-                      </table>
-                    
+                    </table>
                   </div>
+                  
 
                   <div className="form-group">
                     <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
@@ -111,14 +112,14 @@ export default class Subs_Raise extends Component {
           <div class="col-md-6 p-0 bg-white h-md-100 loginarea">
             <div class="d-md-flex align-items-center h-md-100 p-5 justify-content-center">
               <div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar">
-                <table class="table table-fixed table-bordered table-striped mb-0">
+                <table class="table table-fixed table-bordered table-striped mb-0 big-table">
                   <thead>
                     <tr>
                       <th scope="details">Details</th>
                     </tr>
                   </thead>
                   
-                  <tbody>
+                  <tbody class="big-table">
                     <tr>
                       <td>Dr.Ajay Kumar<br/>5CSE1<br/>27-02-2020<br/>3</td>
                     </tr>

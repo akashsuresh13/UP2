@@ -4,6 +4,7 @@ import user_icon from '../images/icons/user.png'
 import password_icon from '../images/icons/password.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import '../font-awesome-4.7.0/css/font-awesome.css'
 
 export default class Login extends Component{
 
@@ -49,36 +50,47 @@ export default class Login extends Component{
                         position: 'absolute'}}>
                 <div className="col-md-6 mt-5 mx-auto">
                     <form onSubmit={this.onSubmit}
-                        style={{textalign: 'center',
-                                margin: 'auto',
-                            verticalalign: 'middle'}}>
-                        <h1 className="h3 mb-3 font-weight-normal">Sign In</h1>
-                        <div className="form-inline">
-                        <img src={user_icon} class="img-fluid" alt="Responsive image"></img>
-                            <input 
-                                type="email"
-                                className="form-control"
-                                name="uemail"
-                                placeholder="Enter Email"
-                                value={this.state.uemail}
-                                style={{width:'auto',margin:'5%'}}
-                                onChange={this.onChange}
-                                required
-                            />
+                            style={{textalign: 'center',
+                                    margin: 'auto',
+                                    verticalalign: 'middle'}}>
+                            
+                        <div className="form_group">
+                            <h1 className="h3 mb-3 font-weight-normal">Sign In</h1>
                         </div>
-                        <div className="form-inline">
-                            <img src={password_icon} class="img-fluid" alt="Responsive image"></img>
-                            <input 
-                                type="password"
-                                className="form-control"
-                                name="upass"
-                                style={{width:'auto',margin:'5%'}}
-                                placeholder="Enter Password"
-                                value={this.state.upass}
-                                onChange={this.onChange}
-                                required
-                            />
+                        
+                        <div class="input-group form-group">
+                            <div style={{padding:"2px 10px 0px 10px"}}
+                                    class="input-group-prepend btn">
+                                    <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                            </div>
+                            <input type="email" 
+                                    class="form-control"
+                                    name="uemail" 
+                                    placeholder="Email"
+                                    value={this.state.uemail}
+                                    onChange={this.onChange}
+                                    required
+                                    autoFocus
+                                    aria-label="" 
+                                    aria-describedby="basic-addon1" />
                         </div>
+                        
+                        <div class="input-group form-group">
+                            <div style={{padding:"2px 10px 0px 10px"}} 
+                                    class="input-group-prepend btn">
+                                    <i class="fa fa-lock fa-2x" aria-hidden="true"></i>
+                            </div>
+                            <input type="password" 
+                                    class="form-control"
+                                    name="upass" 
+                                    placeholder="Password"
+                                    value={this.state.upass}
+                                    onChange={this.onChange}
+                                    required
+                                    aria-label="" 
+                                    aria-describedby="basic-addon1" />
+                        </div>
+
                         <div className="form-group">
                             <button
                                 type="submit"
