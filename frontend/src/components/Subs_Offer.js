@@ -29,74 +29,121 @@ export default class Subs_Raise extends Component {
     return (
       <div className="App">
         <div class="d-md-flex h-md-100 align-items-center">
-          <div class="col-md-6 p-0 bg-indigo h-md-100">
+            <div class="col-md-6 p-0 bg-indigo h-md-100">
               <div class="text-white d-md-flex align-items-center h-100 p-5 text-center justify-content-center">
                 <div class="border rounded p-5">
-                
-                  <div className="form-group">
+
+                  <div class="form-group">
+                    <select class="custom-select">
+                      <option selected>Open this select menu</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+
+                  <div style={{height:"200px",overflow:"auto"}} class="form-group">
+        
+                      <div style={{height:"50px",textAlign:"center",fontSize:"24px",backgroundColor:"white"}}>Sections</div>
+
+                      <table class="table table-fixed table-bordered table-striped mb-0" bgcolor="white">
+                  
+                        {/* <thead style={{position:"fixed"}}> 
+                          <tr>
+                            <th scope="sec">Section</th>
+                          </tr>
+                        </thead> */}
+
+                        <tbody>
+                          <tr>
+                            <td>5CSE1</td>
+                          </tr>
+                          <tr>
+                            <td>5CSE2</td>
+                          </tr>
+                          <tr>
+                            <td>5CSE3</td>
+                          </tr>
+                          <tr>
+                            <td>5CSE4</td>
+                          </tr>
+                          <tr>
+                            <td>5CSE5</td>
+                          </tr>
+                          <tr>
+                            <td>5CSE6</td>
+                          </tr>
+                          <tr>
+                            <td>5CSE4</td>
+                          </tr>
+                          <tr>
+                            <td>5CSE5</td>
+                          </tr>
+                          <tr>
+                            <td>5CSE6</td>
+                          </tr><tr>
+                            <td>5CSE4</td>
+                          </tr>
+                          <tr>
+                            <td>5CSE5</td>
+                          </tr>
+                          <tr>
+                            <td>5CSEM</td>
+                          </tr>
+                        </tbody>
+
+                      </table>
                     
-                      
-                      <div class="form-group">
-                        <select id="section">
-                          <option value="default">Select Section</option>
-                          <option value="1">5CSE1</option>
-                          <option value="2">5CSE2</option>
-                          <option value="3">5CSE3</option>
-                          <option value="4">5CSE4</option>
-                        </select> 
-                        <div class="form-group">
-                            <table class="table table-bordered table-striped mb-0" bgcolor="white">
-                              <thead>
-                                <tr>
-                                  <th scope="sec">Section</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>5CSE1</td>
-                                </tr>
-                                <tr>
-                                  <td>5CSE2</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                        
-                        </div>
-                      </div>
-                      
-                    
-                  </div> 
+                  </div>
+
                   <div className="form-group">
-                      <button type="button" class="button-margin btn btn-primary">Add</button>
-                      <button type="button" class="button-margin btn btn-danger">Delete</button>
+                    <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
+                      <button type="button" class="btn btn-danger">DELETE</button>
+                      <button type="button" class="btn btn-primary">ADD</button>
+                      <button type="button" class="btn btn-warning">RESET</button>
+                    </div>
                   </div>
                 </div>
               </div>
-          </div>
+            </div>
           
 
           <div class="col-md-6 p-0 bg-white h-md-100 loginarea">
-              <div class="d-md-flex align-items-center h-md-100 p-5 justify-content-center">
-              <div class="table-wrapper-scroll-y my-custom-scrollbar">
-
-              <table class="table table-bordered table-striped mb-0">
-  <thead>
-    <tr>
-      <th scope="details">Details</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Dr.Ajay Kumar<br/>5CSE1<br/>27-02-2020<br/>3</td>
-    </tr>
-    <tr>
-      <td>Dr.Blessed Prince<br/>5CSE5<br/>21-02-2020<br/>1</td>
-    </tr>
-  </tbody>
-</table>
-
-</div>
+            <div class="d-md-flex align-items-center h-md-100 p-5 justify-content-center">
+              <div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar">
+                <table class="table table-fixed table-bordered table-striped mb-0">
+                  <thead>
+                    <tr>
+                      <th scope="details">Details</th>
+                    </tr>
+                  </thead>
+                  
+                  <tbody>
+                    <tr>
+                      <td>Dr.Ajay Kumar<br/>5CSE1<br/>27-02-2020<br/>3</td>
+                    </tr>
+                    <tr>
+                      <td>Dr.Blessed Prince<br/>5CSE5<br/>21-02-2020<br/>1</td>
+                    </tr>
+                    <tr>
+                      <td>Dr.Blessed Prince<br/>5CSE5<br/>21-02-2020<br/>1</td>
+                    </tr>
+                    <tr>
+                      <td>Dr.Blessed Prince<br/>5CSE5<br/>21-02-2020<br/>1</td>
+                    </tr>
+                    <tr>
+                      <td>Dr.Blessed Prince<br/>5CSE5<br/>21-02-2020<br/>1</td>
+                    </tr>
+                    <tr>
+                      <td>Dr.Blessed Prince<br/>5CSE5<br/>21-02-2020<br/>1</td>
+                    </tr>
+                    <tr>
+                      <td>Dr.Blessed Prince<br/>5CSE5<br/>21-02-2020<br/>1</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
+            </div>
           </div>
         </div>
       </div>

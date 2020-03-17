@@ -135,15 +135,22 @@
   border-bottom: 15px solid white;
 }
 
-.mainIcon .myiconstop:after {
-  content: "";
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  margin-left: -10px;
-  width: 0; 
-  height: 0; 
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-top: 15px solid white;
+.table-fixed tbody {
+  height: 300px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.table-fixed thead,
+.table-fixed tbody,
+.table-fixed tr,
+.table-fixed td,
+.table-fixed th {
+  display: block;
+}
+
+.table-fixed tbody td,
+.table-fixed tbody th,
+.table-fixed thead > tr > th {
+  position: relative;
 }
