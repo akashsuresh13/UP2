@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import jwt_decode from 'jwt-decode'
 import { Link,withRouter } from 'react-router-dom'
 import substitute_icon from '../images/icons/substitute.png'
+import events_icon from '../images/icons/events.png'
 import '../App.css'
-import profile_icon from '../images/icons/profile.png'
 // import { decode } from 'punycode'
 
 export default class Profile extends Component{
@@ -44,17 +44,21 @@ export default class Profile extends Component{
                         </div>
                     </div>                         */}
                     <div class="text-white d-md-flex align-items-center h-100 p-5 text-center justify-content-center">
-                            <Link to="/subs_raise" className="nav-link">
-                                <div class = "mytext">R</div>
-                            </Link>
+                        <div className="mainIcon">
+                            <center><Link to="/subs_offer" className="nav-link"><div className = "myiconstop">
+                                REQUEST
+                                </div></Link></center>
                             <img src={substitute_icon} class="img-fluid" alt="Responsive image"></img>
-                            <Link to="/subs_offer" className="nav-link">
-                                <div class = "mytext">O</div>
-                            </Link>
+                            <center><Link to="/subs_raise" className="nav-link"><div className = "myiconsdown">
+                                RAISE
+                                </div></Link></center>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6 p-0 bg-white h-md-100 loginarea">
-                    Second Content
+                    <div class="text-white d-md-flex align-items-center h-100 p-5 text-center justify-content-center">
+                        <Link to="/events" className="nav-link"><img src={events_icon} class="img-fluid" alt="Responsive image"></img></Link>
+                    </div>
                 </div>
             </div>
         )
