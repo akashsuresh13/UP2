@@ -50,7 +50,7 @@ export default class Profile extends Component{
                                 </div></Link></center>
                             <img src={substitute_icon} class="img-fluid" alt="Responsive image"></img>
                             <center><Link to="/subs_raise" className="nav-link"><div className = "myiconsdown">
-                                RAISE
+                                OFFER
                                 </div></Link></center>
                         </div>
                     </div>

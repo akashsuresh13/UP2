@@ -2,7 +2,7 @@ import React,{ Component } from 'react'
 import { Link,withRouter } from 'react-router-dom'
 import home_icon from '../images/icons/home.png'
 import logout_icon from '../images/icons/logout.png'
-import jwt_decode from 'jwt-decode'
+import '../font-awesome-4.7.0/css/font-awesome.css'
 
 class Navbar extends Component{
 
@@ -38,13 +38,13 @@ class Navbar extends Component{
 
                         <li className="nav-item">
                             <Link to="/profile" className="nav-link">
-                                <img src={home_icon} class="img-fluid" alt="Responsive image"></img>
+                                <i class="fa fa-home fa-lg" aria-hidden="true"></i>
                             </Link>
                         </li>
 
                         <li className="nav-item">
                             <a href="" onClick={this.logOut.bind(this)} className="nav-link">
-                                <img src={logout_icon} class="img-fluid" alt="Responsive image"></img>
+                                <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>
                             </a>
                         </li>
                     </ul>

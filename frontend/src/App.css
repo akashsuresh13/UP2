@@ -14,17 +14,6 @@
   color: white;
 }
 
-.my-custom-scrollbar {
-  position: relative;
-  height: 400px;
-  width: 100%;
-  overflow: auto;
-}
-
-.table-wrapper-scroll-y {
-  display: block;
-}
-
 .App-intro {
   font-size: large;
 }
@@ -42,11 +31,6 @@
 .text-cyan { color: #35bdff; }
 .button-margin { margin: 0 15px}
 
-.anyClass {
-  height: 200px;
-  overflow-y: scroll;
-}
-
 .mytooltip .mytext {
   visibility: hidden;
   width: 250px;
@@ -61,6 +45,7 @@
   padding: 5px 0;
   position: absolute;
 }
+
 .mytooltip {
   position: relative;
   display: inline-block;
@@ -127,7 +112,7 @@
 .mainIcon .myiconsdown:after {
   content: "";
   position: absolute;
-  bottom: 90%;
+  bottom: 95%;
   left: 50%;
   margin-left: -10px;
   width: 0; 
@@ -140,7 +125,7 @@
 .mainIcon .myiconstop:before {
   content: "";
   position: absolute;
-  top: 90%;
+  top: 95%;
   left: 50%;
   margin-left: -10px;
   width: 0; 
@@ -150,34 +135,52 @@
   border-top: 15px solid white;
 }
 
-.table-fixed tbody {
-  /* height: 300px; */
-  overflow-y: auto;
-  width: 100%;
-}
-
-.big-table{
-  height: 300px;
-}
+table tbody { display:block; overflow-y:scroll; }
+table thead, table tbody tr { display:table; width:100%; table-layout:fixed; }
 
 .small-table{
   height: 150px;
 }
 
-.table-fixed thead,
-.table-fixed tbody,
-.table-fixed tr,
-.table-fixed td,
-.table-fixed th {
-  display: block;
+.big-table{
+  height: 400px;
 }
 
-.table-fixed tbody td,
-.table-fixed tbody th,
-.table-fixed thead > tr > th {
-  position: relative;
+.forcetext-leftalign{
+  text-align: left;
 }
 
-.overtable{
-  height: 100px;
+.item_id{
+  font-size: 24px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.item_user{
+  font-size: 24px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.event_name{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+td a{ 
+  display: block; 
+  border: 1px solid black;
+  padding: 16px; 
+  text-decoration: none;
+}
+
+td a:hover{
+  text-decoration: none;
+  background-color: rgba(141, 2, 31, 0.8);
+}
+
+.anyClass{
+  height:200px;
+  overflow-y: scroll;
+  width:90%;
 }
