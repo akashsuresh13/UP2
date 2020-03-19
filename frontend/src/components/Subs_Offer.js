@@ -44,7 +44,7 @@ export default class Subs_Raise extends Component {
 
                   <div style={{height:"200px",overflow:"auto"}} class="form-group">
         
-                      <div style={{height:"50px",textAlign:"center",fontSize:"24px",backgroundColor:"white"}}>Sections</div>
+                      <div style={{height:"50px",textAlign:"center",fontSize:"24px",backgroundColor:"white",color:"black"}}>Sections</div>
 
                       <table class="table table-fixed table-bordered table-striped mb-0" bgcolor="white">
                   

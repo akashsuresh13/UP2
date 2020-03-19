@@ -35,7 +35,8 @@ class Events1 extends Component {
                     <input type="text" class="form-control" placeholder="Event Name" 
                             name="email"
                             value={this.state.eventName}
-                            onChange={this.onChange} />
+                            onChange={this.onChange} 
+                    />
                   </div>
                   <div className="form-group">
                     <div class="form-inline">
