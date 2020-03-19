@@ -8,6 +8,7 @@ import edit_icon from '../images/icons/edit.png'
 import '../../src/App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import '../font-awesome-4.7.0/css/font-awesome.css'
 
 export default class Subs_Raise extends Component {
   
@@ -24,6 +25,10 @@ export default class Subs_Raise extends Component {
   
   onChange(e){
       this.setState({[e.target.name]: e.target.value})
+  }
+
+  just4test(){
+    alert("im deleted")
   }
 
   render() {
@@ -85,66 +90,60 @@ export default class Subs_Raise extends Component {
                       <input type="text" class="form-control" value="Entire Day" readOnly/>
                     </div>
                   </div>
-
-               {/*<div className="form-group">
-                    <button type="button" class="btn btn-primary btn-lg btn-block">ADD</button>
-                  </div>
-
-                  <div className="form-group">
-                    <button type="button" class="btn btn-danger btn-lg btn-block">DELETE</button>
-                  </div> */}
-
+                  <input type="text" class="form-control" value="Entire Day"/>
+                </div></div>
                   <div className="form-group">
                     <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-danger">DELETE</button>
-                      <button type="button" class="btn btn-primary">ADD</button>
-                      <button type="button" class="btn btn-warning">RESET</button>
+                      <button type="button" style={{width:"33.33%"}} class="btn btn-danger"><i class="fa fa-plus fa-2x" aria-hidden="true"></i></button>
+                      <button type="button" style={{width:"33.33%"}} class="btn btn-primary"><i class="fa fa-minus-circle fa-2x" aria-hidden="true"></i></button>
+                      <button type="button" style={{width:"33.33%"}} class="btn btn-warning"><i class="fa fa-refresh fa-2x" aria-hidden="true"></i></button>
                     </div>
                   </div>
-
                 </div>
-              </div>
-          </div>
 
           <div class="col-md-6 p-0 bg-white h-md-100 loginarea">
             <div class="d-md-flex align-items-center h-md-100 p-5 justify-content-center" >
-              <div class="table-wrapper-scroll-y my-custom-scrollbar">
-
-                <table class="table table-bordered table-striped mb-0">
-                  <thead>
-                    <tr>
-                      <th scope="col">SOID</th>
-                      <th scope="col">Details</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">GS01</th>
-                      <td>5CSE1<br/>27/03/2020/<br/>3</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">GS01</th>
-                      <td>5CSE1<br/>27/03/2020/<br/>3</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">GS01</th>
-                      <td>5CSE1<br/>27/03/2020/<br/>3</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">GS01</th>
-                      <td>5CSE1<br/>27/03/2020/<br/>3</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">GS01</th>
-                      <td>5CSE1<br/>27/03/2020/<br/>3</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">GS01</th>
-                      <td>5CSE1<br/>27/03/2020/<br/>3</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+              <table class="table table-striped header-fixed">
+                <thead>
+                  <tr>
+                    <th>Details</th>
+                  </tr>
+                </thead>
+                <tbody className="big-table forcetext-leftalign">
+                  <tr>
+                    <td>
+                      <a onClick={this.just4test}><span className="item_id text-danger">ID : GS01</span><br/>
+                      <span className="text-primary">CLASS : 5CSE1</span><br/>
+                      <span className="text-primary">DATE : 27/03/2020</span><br/>
+                      <span className="text-primary">HOUR : 1</span></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a onClick={this.just4test}><span className="item_id text-danger">ID : GS01</span><br/>
+                      <span className="text-primary">CLASS : 5CSE1</span><br/>
+                      <span className="text-primary">DATE : 27/03/2020</span><br/>
+                      <span className="text-primary">HOUR : 1</span></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a onClick={this.just4test}><span className="item_id text-danger">ID : GS01</span><br/>
+                      <span className="text-primary">CLASS : 5CSE1</span><br/>
+                      <span className="text-primary">DATE : 27/03/2020</span><br/>
+                      <span className="text-primary">HOUR : 1</span></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a onClick={this.just4test}><span className="item_id text-danger">ID : GS01</span><br/>
+                      <span className="text-primary">CLASS : 5CSE1</span><br/>
+                      <span className="text-primary">DATE : 27/03/2020</span><br/>
+                      <span className="text-primary">HOUR : 1</span></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
