@@ -9,7 +9,9 @@ router.get('/fetch',so_con.list)
 
 router.post('/delete',so_con.delete)
 
-router.get('/tfetch/:id',so_con.tfetch)
+router.post('/tfetch',so_con.tfetch)
+router.post('/minsert',so_con.multi_insert)
+router.post('/sinsert',so_con.single_insert)
 
 router.post('/create',so_con.create)
 
