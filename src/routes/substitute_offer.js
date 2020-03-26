@@ -2,7 +2,7 @@ const express=require('express')
 const router=express.Router()
 const so_con=require('../controllers/substitute_offer')
 
-//router.get('/list',EmployeeController.list)
+//router.get('/list',EmployeeController.list) 
 //router.post('/create',EmployeeController.create)
 
 router.get('/fetch',so_con.list)

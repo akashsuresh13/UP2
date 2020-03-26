@@ -92,3 +92,7 @@ controllers.create = async (req,res) => {
 }
 
 module.exports=controllers
+
+//Call karo nanba
+// 5mins da. Im eating 
+// seri 
