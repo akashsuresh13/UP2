@@ -4,7 +4,7 @@ module.exports = function(sequelize, DataTypes) {
 	return sequelize.define('fac_alloted', {
 		aid: {
 			type: DataTypes.STRING(50),
-			primaryKey: true
+			allowNull: false
 		},
 		fid: {
 			type: DataTypes.STRING(50),

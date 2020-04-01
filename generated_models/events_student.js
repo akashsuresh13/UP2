@@ -9,6 +9,14 @@ module.exports = function(sequelize, DataTypes) {
 		sid: {
 			type: DataTypes.STRING(50),
 			allowNull: false
+		},
+		sdate: {
+			type: DataTypes.DATEONLY,
+			allowNull: false
+		},
+		is_enabled: {
+			type: DataTypes.ENUM('0','1'),
+			allowNull: false
 		}
 	}, {
 		tableName: 'events_student'

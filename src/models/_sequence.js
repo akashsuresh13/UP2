@@ -1,21 +1,21 @@
 /* jshint indent: 1 */
 
 module.exports = function(sequelize, DataTypes) {
-	return sequelize.define('students', {
-		sid: {
+	return sequelize.define('_sequence', {
+		seq_name: {
 			type: DataTypes.STRING(50),
 			allowNull: false,
 			primaryKey: true
 		},
-		sname: {
-			type: DataTypes.TEXT,
+		seq_group: {
+			type: DataTypes.STRING(10),
 			allowNull: false
 		},
-		sfpd: {
-			type: "LONGBLOB",
+		seq_val: {
+			type: DataTypes.INTEGER(10).UNSIGNED,
 			allowNull: false
 		}
 	}, {
-		tableName: 'students'
+		tableName: '_sequence'
 	});
 };

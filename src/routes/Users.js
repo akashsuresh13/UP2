@@ -17,6 +17,7 @@ users.post('/login',async (req,res) => {
         type: sequelize.QueryTypes.SELECT
     })
     .then(function(user){
+        console.log(user)
         if(user){
             let temp = user[0]
             let userdatas = {
@@ -28,14 +29,16 @@ users.post('/login',async (req,res) => {
                 let token = jwt.sign(userdatas,process.env.SECRET_KEY,{
                     expiresIn: 1440
                 })
-                res.send(token)
+                res.json({error:false,data:token})
+            }else{
+                res.json({error:true})
             }
         }else{
-            res.status(400).json({error: 'User does not exist'})
+            res.status(400).json({error: true})
         }
     })
     .catch(err => {
-        res.status(400).json({error: err})
+        res.status(400).json({error: true})
     })
 })
 

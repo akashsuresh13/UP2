@@ -8,6 +8,9 @@ const so_con=require('../controllers/substitute_offer')
 router.get('/fetch',so_con.list)
 
 router.post('/delete',so_con.delete)
+router.post('/deletedh',so_con.delete_dh)
+router.post('/deletedate',so_con.delete_date)
+router.post('/deletedates',so_con.delete_dates)
 
 router.post('/tfetch',so_con.tfetch)
 router.post('/minsert',so_con.multi_insert)

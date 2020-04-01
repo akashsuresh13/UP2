@@ -10,6 +10,10 @@ module.exports = function(sequelize, DataTypes) {
 		sname: {
 			type: DataTypes.TEXT,
 			allowNull: false
+		},
+		sfpd: {
+			type: "LONGBLOB",
+			allowNull: false
 		}
 	}, {
 		tableName: 'students'

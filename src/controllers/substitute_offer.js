@@ -11,7 +11,10 @@ var so_con = sequelize.import('../models/substitute_offers')
 sequelize.sync({force:false})
 
 controllers.list=async (req,res) => {
-    const data=await so_con.findAll()
+    const data=await so_con.findAll(
+        {limit:10,
+         order:[[`date`,'DESC']]}
+    )
     .then(function(data){
         return data
     })
@@ -31,6 +34,8 @@ controllers.single_unit = async (fid,new_date,day_no) => {
                 WHERE t.aid=f.aid and f.fid='${fid}' 
                 and t.day_no=${day_no}`
 
+    console.log(sql)
+
     const data=await sequelize.query(sql,{
         type: sequelize.QueryTypes.INSERT
     })
@@ -49,7 +54,7 @@ controllers.single_insert = async(req,res) => {
 
     let fid = req.body.ifid
     let start_date = req.body.start_date
-    var start = new Date(Date.parse(start_date));
+    var start = new Date(Date.parse(start_date.split("-").reverse().join("-")));
     var loop = new Date(start);
     let data = await controllers.single_unit(fid,loop.toISOString().slice(0,10),loop.getDay())
     res.json({success: true,data: data})
@@ -63,8 +68,8 @@ controllers.multi_insert = async (req,res) => {
     let start_date = req.body.start_date
     let end_date = req.body.end_date
 
-    var start = new Date(Date.parse(start_date));
-    var end = new Date(Date.parse(end_date));
+    var start = new Date(Date.parse(start_date.split("-").reverse().join("-")));
+    var end = new Date(Date.parse(end_date.split("-").reverse().join("-")));
 
     var loop = new Date(start);
     while(loop <= end){
@@ -100,7 +105,8 @@ controllers.tfetch = async (req,res) => {
         console.log("Im exec")
         // parameter POST
         const data=await so_con.findAll({
-            where: {fid:id}
+            where: {fid:id},
+            order:[[`date`,'DESC']]
         })
         .then(function(data){
             return data
@@ -121,7 +127,48 @@ controllers.delete=async (req,res) => {
     res.json({success: true,deleted: del,message: "Deleted Successfully"})
 }
 
+controllers.delete_dh=async (req,res) => {
 
+    //For deleting particular hour of a date
+    const del = await so_con.destroy({
+        where: { fid: req.body.ifid,
+                 cid: req.body.icid,
+                 date: req.body.istart_date.split("-").reverse().join("-"),
+                 hrid: req.body.ihrid }
+    })
+    res.json({success: true,deleted: del,message: "Deleted Successfully"})
+}
+
+controllers.delete_date=async (req,res) => {
+
+    //For deleting particular date
+    const del = await so_con.destroy({
+        where: { fid: req.body.ifid,
+                 date: req.body.istart_date.split("-").reverse().join("-")
+                }
+    })
+    res.json({success: true,deleted: del,message: "Deleted Successfully"})
+}
+
+controllers.delete_dates=async (req,res) => {
+
+    let istart_date=req.body.istart_date.split("-").reverse().join("-")
+    let iend_date=req.body.iend_date.split("-").reverse().join("-")
+    //For deleting all offers between particular dates
+    let sql = `DELETE FROM substitute_offers 
+                where fid='${req.body.ifid}' and 
+                ${`date`} between '${istart_date}' and '${iend_date}'`
+    const del=await sequelize.query(sql,{
+        type: sequelize.QueryTypes.DELETE
+    })
+    .then(function(data){
+        return data
+    })
+    .catch(error => {
+        return error
+    })
+    res.json({success: true,deleted: del,message: "Deleted Successfully"})
+}
 
 controllers.create = async (req,res) => {
     

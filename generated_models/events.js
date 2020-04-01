@@ -2,17 +2,17 @@
 
 module.exports = function(sequelize, DataTypes) {
 	return sequelize.define('events', {
-		cuid: {
-			type: DataTypes.STRING(50),
-			allowNull: false
-		},
 		eid: {
 			type: DataTypes.STRING(50),
 			allowNull: false,
 			primaryKey: true
 		},
+		cuid: {
+			type: DataTypes.STRING(50),
+			allowNull: false
+		},
 		ename: {
-			type: DataTypes.INTEGER(11),
+			type: DataTypes.STRING(50),
 			allowNull: false
 		}
 	}, {
