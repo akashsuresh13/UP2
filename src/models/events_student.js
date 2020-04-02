@@ -4,11 +4,13 @@ module.exports = function(sequelize, DataTypes) {
 	return sequelize.define('events_student', {
 		eid: {
 			type: DataTypes.STRING(50),
-			allowNull: false
+			allowNull: false,
+			primaryKey: true
 		},
 		sid: {
 			type: DataTypes.STRING(50),
-			allowNull: false
+			allowNull: false,
+			primaryKey: true
 		},
 		sdate: {
 			type: DataTypes.DATEONLY,

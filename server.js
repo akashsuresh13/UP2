@@ -1,7 +1,13 @@
 require('dotenv').config()
 const subs_offer=require('./src/routes/substitute_offer')
+const subs_raise=require('./src/routes/substitute_raise')
 var Users = require('./src/routes/Users')
 const students = require('./src/routes/students')
+const culturals = require('./src/routes/culturals')
+const events = require('./src/routes/events')
+const events_faculty = require('./src/routes/events_faculty')
+const events_student = require('./src/routes/events_student')
+const events_practise = require('./src/routes/events_practise')
 const express=require('express')
 const app=express()
 const bodyParser=require('body-parser')
@@ -20,8 +26,14 @@ app.use((req, res, next) => {
 });
 
 app.use('/offer',subs_offer)
+app.use('/raise',subs_raise)
 app.use('/users',Users)
+app.use('/culturals',culturals)
 app.use('/students',students)
+app.use('/evefac',events_faculty)
+app.use('/evestu',events_student)
+app.use('/evepra',events_practise)
+app.use('/events',events)
 
 app.use('/',(req,res) => {
     res.send("Hello World from node.js server")
