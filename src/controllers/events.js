@@ -18,6 +18,28 @@ controllers.list = async (req, res) => {
 
 }
 
+controllers.teacherdata = async (req,res) => {
+
+  let fid = req.params.ifid
+        
+  let sql = `select eve.eid,cul.cname,eve.ename 
+  from events_faculty efy,events eve,cultural cul 
+  where cul.cuid=eve.cuid and efy.eid=eve.eid 
+  and now() BETWEEN cul.cstart_date and cul.cend_date 
+  and efy.fid='${fid}'`
+
+  const data=await sequelize.query(sql,{
+      type: sequelize.QueryTypes.SELECT
+  })
+  .then(function(data){
+      return data
+  })
+  .catch(error => {
+      return error
+  })
+  res.json({success: true,data: data})
+}
+
 controllers.plist = async (req, res) => {
 
   const data = await table.findAll(

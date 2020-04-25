@@ -18,6 +18,29 @@ controllers.list = async (req, res) => {
 
 }
 
+controllers.parlist = async (req, res) => {
+
+  let ieid = req.params.evid
+  let ieval = req.params.eval
+
+  const data = await table.findAll({
+    where:{
+      eid:ieid,
+      is_enabled:ieval
+    },
+    attributes:['sid']
+  })
+  .then(function(data){
+      return data;
+  })
+  .catch(error => {
+      return error;
+  }); 
+
+  res.json({success : true, data : data});
+
+}
+
 controllers.create = async (req,res) => {
     
     console.log(req.body,new Date())

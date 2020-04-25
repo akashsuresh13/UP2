@@ -9,7 +9,7 @@ export const login = user => {
         upass: user.upass
     })
     .then(res => {
-        localStorage.setItem('usertoken',res.data)
+        localStorage.setItem('usertoken',res.data.data)
         return res.data
     })
     .catch(err => {

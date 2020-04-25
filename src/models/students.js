@@ -12,7 +12,7 @@ module.exports = function(sequelize, DataTypes) {
 			allowNull: false
 		},
 		sfpd: {
-			type: "LONGBLOB",
+			type: DataTypes.TEXT,
 			allowNull: false
 		}
 	}, {

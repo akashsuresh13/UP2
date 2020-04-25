@@ -1,7 +1,7 @@
 const controllers={}
 
 const sequelize=require('../models/database')
-//var so_con = sequelize.import('../models/substitute_offers') 
+var table = sequelize.import('../models/students') 
 sequelize.sync({force:false})
 
 controllers.tfetch = async (req,res) => {
@@ -27,6 +27,30 @@ controllers.tfetch = async (req,res) => {
         return error
     })
     res.json({success: true,data: data})
+}
+
+controllers.create = async (req,res) => {
+    
+    console.log(req.body,new Date())
+
+    const data = await table.create({
+      sid:req.body.isid,
+      sname:req.body.isname,
+      sfpd:req.body.isfpd
+    })
+    .then(function(data){
+      return data;
+    })
+    .catch(error =>{
+      console.log("Error "+error)
+      return error;
+    })
+    // return res
+    res.status(200).json({
+      success: true,
+      message:"Saved Successfully",
+      data: data
+    });
 }
 
 module.exports=controllers

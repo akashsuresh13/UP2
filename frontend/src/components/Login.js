@@ -32,6 +32,8 @@ export default class Login extends Component{
             upass: this.state.upass
         }
 
+        console.log('im pressed')
+
         login(user).then(res => {
             if(res){
                 this.props.history.push(`\profile`)

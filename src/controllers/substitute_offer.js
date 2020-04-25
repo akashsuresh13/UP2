@@ -104,9 +104,11 @@ controllers.tfetch = async (req,res) => {
         console.log("FID : "+id)
         console.log("Im exec")
         // parameter POST
-        const data=await so_con.findAll({
-            where: {fid:id},
-            order:[[`date`,'DESC']]
+        let sql = `select * from substitute_offers 
+        where soid not IN (select soid from substitute_transaction) 
+        AND fid='${id}' ORDER BY ${`date`} DESC`
+        const data=await sequelize.query(sql,{
+            type: sequelize.QueryTypes.SELECT
         })
         .then(function(data){
             return data
