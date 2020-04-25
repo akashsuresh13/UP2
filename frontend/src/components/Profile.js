@@ -45,11 +45,11 @@ export default class Profile extends Component{
                     </div>                         */}
                     <div class="text-white d-md-flex align-items-center h-100 p-5 text-center justify-content-center">
                         <div className="mainIcon">
-                            <center><Link to="/subs_offer" className="nav-link"><div className = "myiconstop">
+                            <center><Link to="/subs_raise" className="nav-link"><div className = "myiconstop">
                                 REQUEST
                                 </div></Link></center>
                             <img src={substitute_icon} class="img-fluid" alt="Responsive image"></img>
-                            <center><Link to="/subs_raise" className="nav-link"><div className = "myiconsdown">
+                            <center><Link to="/subs_offer" className="nav-link"><div className = "myiconsdown">
                                 OFFER
                                 </div></Link></center>
                         </div>

@@ -19,8 +19,8 @@ export default class App extends Component {
           <div>
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/events" component={Events1} />
-            <Route exact path="/subs_raise" component={Subs_Raise} />
             <Route exact path="/subs_offer" component={Subs_Offer} />
+            <Route exact path="/subs_raise" component={Subs_Raise} />
           </div>
         </div>
       </Router>
