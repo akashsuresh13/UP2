@@ -49,9 +49,9 @@ export default class Profile extends Component{
                         <div class="col-lg" style={{marginBottom:15}}><img src={timeline_icon} class="img-fluid" alt="Responsive image" /></div>
                     </div>
                     <div class="row">
-                        <div class="col-lg" style={{marginBottom:15}}><img src={events_icon} class="img-fluid" alt="Responsive image" /></div>
-                        <div class="col-lg" style={{marginBottom:15}}><img src={allotment_icon} class="img-fluid" alt="Responsive image" /></div>
                         <div class="col-lg" style={{marginBottom:15}}><img src={timetable_icon} class="img-fluid" alt="Responsive image" /></div>
+                        <div class="col-lg" style={{marginBottom:15}}><img src={allotment_icon} class="img-fluid" alt="Responsive image" /></div>
+                        <div class="col-lg" style={{marginBottom:15}}><img src={events_icon} class="img-fluid" alt="Responsive image" /></div>
                     </div>
                 </div>
             </div>
