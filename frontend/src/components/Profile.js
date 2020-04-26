@@ -3,6 +3,11 @@ import jwt_decode from 'jwt-decode'
 import { Link,withRouter } from 'react-router-dom'
 import substitute_icon from '../images/icons/substitute.png'
 import events_icon from '../images/icons/events.png'
+import faculty_icon from '../images/icons/faculty.png'
+import subjects_icon from '../images/icons/subjects.png'
+import timeline_icon from '../images/icons/timeline.png'
+import timetable_icon from '../images/icons/timetable.png'
+import allotment_icon from '../images/icons/allotment.png'
 import '../App.css'
 // import { decode } from 'punycode'
 
@@ -31,33 +36,22 @@ export default class Profile extends Component{
     render(){
 
         return(
-            <div class="d-md-flex h-md-100 align-items-center">
-                <div class="col-md-6 p-0 bg-indigo h-md-100">
-                    {/* <div class = "mytooltip">
-                        <img src={profile_icon} class="img-fluid" alt="Responsive image"></img>
-                        <div class = "mytext">
-                            <ul>
-                                <li>{this.state.userName}</li>
-                                <li>{this.state.userID}</li>
-                                <li>{this.state.userFID}</li>
-                            </ul>
-                        </div>
-                    </div>                         */}
-                    <div class="text-white d-md-flex align-items-center h-100 p-5 text-center justify-content-center">
-                        <div className="mainIcon">
-                            <center><Link to="/subs_raise" className="nav-link"><div className = "myiconstop">
-                                REQUEST
-                                </div></Link></center>
-                            <img src={substitute_icon} class="img-fluid" alt="Responsive image"></img>
-                            <center><Link to="/subs_offer" className="nav-link"><div className = "myiconsdown">
-                                OFFER
-                                </div></Link></center>
-                        </div>
+            <div className="App">
+                <div class="container" 
+                     style={{display: 'table',
+                             width: '100%',
+                             top: '16.75%',
+                             left:'7.5%',
+                             position: 'absolute'}}>
+                    <div class="row">
+                        <div class="col-lg" style={{marginBottom:15}}><img src={faculty_icon} class="img-fluid" alt="Responsive image" /></div>
+                        <div class="col-lg" style={{marginBottom:15}}><img src={subjects_icon} class="img-fluid" alt="Responsive image" /></div>
+                        <div class="col-lg" style={{marginBottom:15}}><img src={timeline_icon} class="img-fluid" alt="Responsive image" /></div>
                     </div>
-                </div>
-                <div class="col-md-6 p-0 bg-white h-md-100 loginarea">
-                    <div class="text-white d-md-flex align-items-center h-100 p-5 text-center justify-content-center">
-                        <Link to="/events" className="nav-link"><img src={events_icon} class="img-fluid" alt="Responsive image"></img></Link>
+                    <div class="row">
+                        <div class="col-lg" style={{marginBottom:15}}><img src={events_icon} class="img-fluid" alt="Responsive image" /></div>
+                        <div class="col-lg" style={{marginBottom:15}}><img src={allotment_icon} class="img-fluid" alt="Responsive image" /></div>
+                        <div class="col-lg" style={{marginBottom:15}}><img src={timetable_icon} class="img-fluid" alt="Responsive image" /></div>
                     </div>
                 </div>
             </div>
