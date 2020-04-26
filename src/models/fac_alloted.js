@@ -3,8 +3,10 @@
 module.exports = function(sequelize, DataTypes) {
 	return sequelize.define('fac_alloted', {
 		aid: {
-			type: DataTypes.STRING(50),
-			allowNull: false
+			type: DataTypes.INTEGER,
+			allowNull: false,
+			primaryKey: true,
+			autoIncrement: true
 		},
 		fid: {
 			type: DataTypes.STRING(50),
